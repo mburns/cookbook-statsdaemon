@@ -1,0 +1,12 @@
+DEPENDENCIES
+  apt
+  golang
+  statsdaemon
+    path: .
+    metadata: true
+
+GRAPH
+  apt (2.4.0)
+  golang (1.4.0)
+  statsdaemon (1.0.0)
+    golang (>= 0.0.0)
