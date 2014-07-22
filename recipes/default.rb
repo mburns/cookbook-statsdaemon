@@ -18,35 +18,11 @@
 #
 
 include_recipe 'golang'
-
 include_recipe 'golang::packages'
 
 golang_package 'github.com/bitly/statsdaemon' do
   action :install
 end
-
-#command = <<-EOH
-#sh -x #{node['go']['gobin']}/statsdaemon \
-#-address="#{node['statsdaemon']['address']}" \
-#-flush-interval=#{node['statsdaemon']['flush_interval']} \
-#-graphite="#{node['statsdaemon']['graphite']}" \
-#-persist-count-keys=#{node['statsdaemon']['persist_count_keys']} \
-#-receive-counter="#{node['statsdaemon']['receive_counter']}" \
-#> output.out 2>&1 &
-#EOH
-
-#log command
-#log node['go']['gobin']
-#log node['go']['owner']
-#log node['go']['group']
-
-#bash 'run_statsdaemon' do
-  #action :run
-  #user node['go']['owner']
-  #group node['go']['group']
-  #cwd node['go']['gobin']
-  #code command
-#end
 
 template '/etc/init.d/statsdaemon' do
   source 'statsdaemon_init.erb'
