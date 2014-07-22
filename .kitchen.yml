@@ -7,11 +7,7 @@ provisioner:
 
 platforms:
   #- name: debian-7.2.0
-    #driver_config:
-      #box: debian-7.2.0
   - name: ubuntu-14.04
-    driver_config:
-      box: ubuntu-14.04
 
 suites:
   - name: default
