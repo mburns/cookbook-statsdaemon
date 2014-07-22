@@ -1,4 +1,4 @@
-# Statsdaemon (Chef cookbook for Statsdaemon)
+# Chef cookbook for Statsdaemon
 
 NOT FUNCTIONNAL FOR NOW.
 
