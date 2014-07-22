@@ -1,6 +1,5 @@
 require 'rubocop/rake_task'
 require 'foodcritic'
-require 'kitchen'
 
 # Style tests. Rubocop and Foodcritic
 namespace :style do
@@ -18,16 +17,22 @@ end
 desc 'Run all style checks'
 task style: ['style:chef', 'style:ruby']
 
-# Integration tests. Kitchen.ci
-namespace :integration do
-  desc 'Run Test Kitchen with Vagrant'
-  task :vagrant do
-    Kitchen.logger = Kitchen.default_file_logger
-    Kitchen::Config.new.instances.each do |instance|
-      instance.test(:always)
+begin
+  require 'kitchen'
+  namespace :integration do
+    desc 'Run Test Kitchen with Vagrant'
+    task :vagrant do
+      Kitchen.logger = Kitchen.default_file_logger
+      Kitchen::Config.new.instances.each do |instance|
+        instance.test(:always)
+      end
     end
   end
+rescue LoadError
+  puts '>>>>> Kitchen gem not loaded, omitting tasks'
 end
+
+# Integration tests. Kitchen.ci
 
 # Default
 task default: ['style', 'integration:vagrant']
