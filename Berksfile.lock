@@ -1,10 +1,10 @@
 DEPENDENCIES
   golang
-  statsdaemon
+  statsdaemon-bitly
     path: .
     metadata: true
 
 GRAPH
   golang (1.4.0)
-  statsdaemon (1.0.0)
+  statsdaemon-bitly (1.0.2)
     golang (>= 0.0.0)

@@ -6,13 +6,15 @@ provisioner:
   name: chef_zero
 
 platforms:
-  #- name: debian-7.2.0
+  - name: debian-7.6
+    driver_config:
+      box: chef/debian-7.6
   - name: ubuntu-14.04
 
 suites:
   - name: default
     run_list:
-      - recipe[statsdaemon]
+        - recipe[statsdaemon-bitly]
     attributes:
         go:
             owner: 'vagrant'
