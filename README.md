@@ -34,6 +34,10 @@ Just include `statsdaemon` in your node's `run_list`:
 }
 ```
 
+## Supermarket share
+
+    knife supermarket share statsdaemon-bitly "Monitoring & Trending"
+
 ## License
 
 This cookbook is released under the MIT License. See the bundled LICENSE file
