@@ -1,6 +1,6 @@
 # Chef cookbook for Statsdaemon
 
-[![Build Status](https://travis-ci.org/odolbeau/cookbook-statsdaemon.png)](https://travis-ci.org/odolbeau/cookbook-statsdaemon)
+[![Build Status](https://travis-ci.org/odolbeau/cookbook-statsdaemon-bitly.png)](https://travis-ci.org/odolbeau/cookbook-statsdaemon-bitly)
 
 ## Description
 
