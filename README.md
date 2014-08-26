@@ -33,3 +33,8 @@ Just include `statsdaemon` in your node's `run_list`:
   ]
 }
 ```
+
+## License
+
+This cookbook is released under the MIT License. See the bundled LICENSE file
+for details.
