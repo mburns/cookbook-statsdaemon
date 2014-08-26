@@ -4,7 +4,7 @@ maintainer_email 'odolbeau@gmail.com'
 license          'MIT'
 description      'Installs statsdaemon (bitly)'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '1.0.2'
+version          '1.0.3'
 
 recipe 'default', 'Installs statsdaemon.'
 
