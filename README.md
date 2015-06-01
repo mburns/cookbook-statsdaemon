@@ -1,6 +1,7 @@
 # Chef cookbook for Statsdaemon
 
-[![Build Status](https://travis-ci.org/odolbeau/cookbook-statsdaemon-bitly.png)](https://travis-ci.org/odolbeau/cookbook-statsdaemon-bitly)
+[![Build Status](https://travis-ci.org/mburns/cookbook-statsdaemon-bitly.svg)](https://travis-ci.org/mburns/cookbook-statsdaemon-bitly)
+[![Chef cookbook](https://img.shields.io/cookbook/v/statsdaemon-bitly.svg)](https://supermarket.chef.io/cookbooks/statsdaemon-bitly)
 
 ## Description
 
@@ -16,7 +17,7 @@ daemon written in go by bitly.
 
 **Notes**: This cookbook has been tested on Debian 7.6. It may work on other
 platforms with or without modification. Please [report
-issues](https://github.com/odolbeau/cookbook-statsdaemon-bitly/issues) any
+issues](https://github.com/mburns/cookbook-statsdaemon-bitly/issues) any
 additional platforms so they can be added.
 
 ## Usage
