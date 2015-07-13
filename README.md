@@ -1,7 +1,7 @@
 # Chef cookbook for Statsdaemon
 
-[![Build Status](https://travis-ci.org/mburns/cookbook-statsdaemon-bitly.svg)](https://travis-ci.org/mburns/cookbook-statsdaemon-bitly)
-[![Chef cookbook](https://img.shields.io/cookbook/v/statsdaemon-bitly.svg)](https://supermarket.chef.io/cookbooks/statsdaemon-bitly)
+[![Build Status](https://travis-ci.org/mburns/cookbook-statsdaemon.svg)](https://travis-ci.org/mburns/cookbook-statsdaemon)
+[![Chef cookbook](https://img.shields.io/cookbook/v/statsdaemon.svg)](https://supermarket.chef.io/cookbooks/statsdaemon)
 
 ## Description
 
@@ -17,27 +17,27 @@ daemon written in go by bitly.
 
 **Notes**: This cookbook has been tested on Debian 7.6. It may work on other
 platforms with or without modification. Please [report
-issues](https://github.com/mburns/cookbook-statsdaemon-bitly/issues) any
+issues](https://github.com/mburns/cookbook-statsdaemon/issues) any
 additional platforms so they can be added.
 
 ## Usage
 
-### statsdaemon-bitly::default
+### statsdaemon::default
 
-Just include `statsdaemon-bitly` in your node's `run_list`:
+Just include `statsdaemon` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[statsdaemon-bitly]"
+    "recipe[statsdaemon]"
   ]
 }
 ```
 
 ## Supermarket share
 
-    knife supermarket share statsdaemon-bitly "Monitoring & Trending"
+    knife supermarket share statsdaemon "Monitoring & Trending"
 
 ## License
 

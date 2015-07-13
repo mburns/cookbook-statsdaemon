@@ -10,11 +10,11 @@
 ### END INIT INFO
 
 SCRIPT="<%= @node['go']['gobin'] %>/statsdaemon \
--address=\"<%= @node['statsdaemon_bitly']['address'] %>\" \
--flush-interval=<%= @node['statsdaemon_bitly']['flush_interval'] %> \
--graphite=\"<%= @node['statsdaemon_bitly']['graphite'] %>\" \
--persist-count-keys=<%= @node['statsdaemon_bitly']['persist_count_keys'] %> \
--receive-counter=\"<%= @node['statsdaemon_bitly']['receive_counter'] %>\""
+-address=\"<%= @node['statsdaemon']['address'] %>\" \
+-flush-interval=<%= @node['statsdaemon']['flush_interval'] %> \
+-graphite=\"<%= @node['statsdaemon']['graphite'] %>\" \
+-persist-count-keys=<%= @node['statsdaemon']['persist_count_keys'] %> \
+-receive-counter=\"<%= @node['statsdaemon']['receive_counter'] %>\""
 
 RUNAS=<%= @node['go']['owner'] %>
 
