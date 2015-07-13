@@ -14,7 +14,7 @@ platforms:
 suites:
   - name: default
     run_list:
-        - recipe[statsdaemon-bitly]
+        - recipe[statsdaemon]
     attributes:
         go:
             owner: 'vagrant'

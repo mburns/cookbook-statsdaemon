@@ -34,5 +34,7 @@ end
 
 # Integration tests. Kitchen.ci
 
+task ci: ['style']
+
 # Default
 task default: ['style', 'integration:vagrant']
