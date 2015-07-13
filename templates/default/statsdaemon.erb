@@ -10,16 +10,16 @@
 ### END INIT INFO
 
 SCRIPT="<%= @node['go']['gobin'] %>/statsdaemon \
--address=\"<%= @node['statsdaemon']['listen_addr'] %>\" \
--flush-interval=<%= @node['statsdaemon']['flush_interval'] %> \
--graphite=\"<%= @node['statsdaemon']['graphite_addr'] %>\" \
--persist-count-keys=<%= @node['statsdaemon']['persist_count_keys'] %> \
--receive-counter=\"<%= @node['statsdaemon']['receive_counter'] %>\""
+-address=\"<%= @listen_addr %>\" \
+-flush-interval=<%= @flush_interval %> \
+-graphite=\"<%= @graphite_addr %>\" \
+-persist-count-keys=<%= @persist_count_keys %> \
+-receive-counter=\"<%= @receive_counter %>\""
 
 RUNAS=<%= @node['go']['owner'] %>
 
 PIDFILE=/var/run/statsdaemon.pid
-LOGFILE=/var/log/statsdaemon.log
+LOGFILE=<%= @log %>
 
 start() {
   if [ -f /var/run/$PIDNAME ] && kill -0 $(cat /var/run/$PIDNAME); then
