@@ -17,6 +17,11 @@ end
 desc 'Run all style checks'
 task style: ['style:chef', 'style:ruby']
 
+desc 'Runit chefspec unit tests'
+task :unit do
+  sh "bundle exec 'rspec ./test/unit/spec/ --color --format documentation'"
+end
+
 begin
   require 'kitchen'
   namespace :integration do
@@ -32,9 +37,7 @@ rescue LoadError
   puts '>>>>> Kitchen gem not loaded, omitting tasks'
 end
 
-# Integration tests. Kitchen.ci
-
-task ci: ['style']
+task ci: %w(style unit)
 
 # Default
-task default: ['style', 'integration:vagrant']
+task default: %w(style unit integration:vagrant)

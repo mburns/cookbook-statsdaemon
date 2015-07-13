@@ -9,7 +9,9 @@ platforms:
   - name: debian-7.6
     driver_config:
       box: chef/debian-7.6
+  - name: ubuntu-12.04
   - name: ubuntu-14.04
+  - name: ubuntu-14.10
 
 suites:
   - name: default
@@ -21,3 +23,15 @@ suites:
             group: 'vagrant'
         statsdaemon:
             graphite_addr: '-'
+            flavor: 'bitly'
+
+  - name: vimeo
+    run_list:
+        - recipe[statsdaemon]
+    attributes:
+        go:
+            owner: 'vagrant'
+            group: 'vagrant'
+        statsdaemon:
+            graphite_addr: '-'
+            flavor: 'vimeo'

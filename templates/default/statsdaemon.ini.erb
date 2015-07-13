@@ -1,7 +1,7 @@
-listen_addr = "<%= @node['statsdaemon_vimeo']['listen_addr'] %>"
-admin_addr = "<%= @node['statsdaemon_vimeo']['admin_addr'] %>"
-graphite_addr = "<%= @node['statsdaemon_vimeo']['graphite_addr'] %>"
-flush_interval = <%= @node['statsdaemon_vimeo']['flush_interval'] || 60 %>
+listen_addr = "<%= @node['statsdaemon']['listen_addr'] %>"
+admin_addr = "<%= @node['statsdaemon']['vimeo']['admin_addr'] %>"
+graphite_addr = "<%= @node['statsdaemon']['graphite_addr'] %>"
+flush_interval = <%= @node['statsdaemon']['flush_interval'] %>
 
 prefix_rates = "<%= @node['statsdaemon']['vimeo']['prefix_rates'] %>"
 prefix_timers = "<%= @node['statsdaemon']['vimeo']['prefix_timers'] %>"

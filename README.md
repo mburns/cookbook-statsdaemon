@@ -5,8 +5,7 @@
 
 ## Description
 
-Chef cookbook for [statsdaemon](https://github.com/bitly/statsdaemon), a statsd
-daemon written in go by bitly.
+Chef cookbook for [statsdaemon](https://github.com/bitly/statsdaemon), a statsd daemon written in go by Bitly or, optionally, Vimeo.
 
 ## Requirements
 
@@ -15,10 +14,7 @@ daemon written in go by bitly.
 * Debian
 * Ubuntu
 
-**Notes**: This cookbook has been tested on Debian 7.6. It may work on other
-platforms with or without modification. Please [report
-issues](https://github.com/mburns/cookbook-statsdaemon/issues) any
-additional platforms so they can be added.
+**Notes**: This cookbook has been tested on Debian 7.6. It may work on other platforms with or without modification. Please [report issues](https://github.com/mburns/cookbook-statsdaemon/issues) any additional platforms so they can be added.
 
 ## Usage
 
@@ -41,5 +37,4 @@ Just include `statsdaemon` in your node's `run_list`:
 
 ## License
 
-This cookbook is released under the MIT License. See the bundled LICENSE file
-for details.
+This cookbook is released under the MIT License. See the bundled LICENSE file for details.
