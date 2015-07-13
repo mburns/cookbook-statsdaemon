@@ -11,7 +11,6 @@ file '/var/log/statsdaemon.log' do
 end
 
 template '/etc/init.d/statsdaemon' do
-  source 'statsdaemon_init.erb'
   mode 0755
   owner 'root'
   group 'root'
