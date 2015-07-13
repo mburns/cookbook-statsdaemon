@@ -1,9 +1,7 @@
-include_recipe 'golang'
-include_recipe 'golang::packages'
-
-golang_package 'github.com/bitly/statsdaemon' do
-  action :install
-end
+#
+# Cookbook Name:: statsdaemon
+# Recipe:: default
+#
 
 file '/var/log/statsdaemon.log' do
   owner node['go']['owner']
@@ -19,6 +17,8 @@ template '/etc/init.d/statsdaemon' do
   group 'root'
   notifies :reload, 'service[statsdaemon]', :delayed
 end
+
+include_recipe "statsdaemon::#{node['statsdaemon']['flavor']}"
 
 service 'statsdaemon' do
   action [:enable, :start]

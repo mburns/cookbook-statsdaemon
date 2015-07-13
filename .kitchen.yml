@@ -20,4 +20,4 @@ suites:
             owner: 'vagrant'
             group: 'vagrant'
         statsdaemon:
-            graphite: '-'
+            graphite_addr: '-'

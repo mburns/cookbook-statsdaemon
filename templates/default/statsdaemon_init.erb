@@ -10,9 +10,9 @@
 ### END INIT INFO
 
 SCRIPT="<%= @node['go']['gobin'] %>/statsdaemon \
--address=\"<%= @node['statsdaemon']['address'] %>\" \
+-address=\"<%= @node['statsdaemon']['listen_addr'] %>\" \
 -flush-interval=<%= @node['statsdaemon']['flush_interval'] %> \
--graphite=\"<%= @node['statsdaemon']['graphite'] %>\" \
+-graphite=\"<%= @node['statsdaemon']['graphite_addr'] %>\" \
 -persist-count-keys=<%= @node['statsdaemon']['persist_count_keys'] %> \
 -receive-counter=\"<%= @node['statsdaemon']['receive_counter'] %>\""
 
