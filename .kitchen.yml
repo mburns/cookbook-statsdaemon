@@ -15,6 +15,7 @@ platforms:
 
 suites:
   - name: default
+    sudo: true
     run_list:
         - recipe[statsdaemon]
     attributes:
@@ -26,6 +27,7 @@ suites:
             flavor: 'bitly'
 
   - name: vimeo
+    sudo: true
     run_list:
         - recipe[statsdaemon]
     attributes:
